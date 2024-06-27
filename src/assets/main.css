@@ -1,0 +1,28 @@
+* {
+    font-family: Arial, serif;
+}
+
+body {
+    margin: 30px;
+    background: linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+}
+
+.card{
+    max-width: 1000px;
+    margin: auto;
+}
+
+>h1, >p{
+    text-align:center;
+}
+
+>h1{
+    margin: 60px;
+    color: #ffffff;
+}
+
+>p{
+    font-size:20px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
