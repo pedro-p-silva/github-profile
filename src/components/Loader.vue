@@ -84,4 +84,14 @@ section .loader span::before {
     transform: scale(0);
   }
 }
+
+@media (max-width: 767px){
+  section .loader {
+    position: relative;
+    width: 15.5%;
+    height: 60px;
+    top: 200px;
+    left: 43.5%;
+  }
+}
 </style>

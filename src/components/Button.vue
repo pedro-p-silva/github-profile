@@ -31,7 +31,7 @@ export default {
   margin-bottom: 7px;
 
   @media (max-width: 767px){
-    margin: auto;
+    margin: auto auto 10px;
   }
 }
 
