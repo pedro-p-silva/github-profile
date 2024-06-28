@@ -26,6 +26,7 @@ export function validatePage(e: {}){
     }
 
     if (e === 'third_page') {
+        window.location.href = '#box-area'
         box_area?.removeAttribute('style')
         show_repos?.setAttribute('style', 'display: none')
         hide_repos?.removeAttribute('style')

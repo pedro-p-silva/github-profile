@@ -7,7 +7,7 @@ export default {
 </script>
 
 <template>
-  <div class="box-area" style="display: none">
+  <div class="box-area" style="display: none" id="box-area">
     <div v-for="repository in repos" class="single-box">
       <div class="img-area"></div>
       <div class="img-text">
