@@ -2,8 +2,12 @@ export function ternaryCondition(data: object, message: string) {
     return data ? data : message
 }
 
-export function alertMessage(selector: Element | null){
+export function alertMessage(selector: Element | null, selectorMessage: Element | null, message: string | null){
     selector?.removeAttribute('hidden')
+
+    if (message != null){
+        selectorMessage!.textContent = message
+    }
 
     setTimeout(function () {
         selector?.setAttribute('hidden', 'true')

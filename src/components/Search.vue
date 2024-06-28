@@ -15,7 +15,7 @@ export default {
   methods: {
     searchProfile: async function () {
       if (this.username.trim() === '') {
-        alertMessage(document.querySelector('.empty_input'))
+        alertMessage(document.querySelector('.empty_input'), null, null)
         return;
       }
       document.querySelector('.search_loader')?.removeAttribute('hidden')
@@ -28,10 +28,13 @@ export default {
         this.validateHiddenSearch()
       }
 
-      if (data.message) {
-        alertMessage(document.querySelector('.not_found'))
+      if (data.message != "Not Found") {
+        alertMessage(document.querySelector('.alert'),
+            document.querySelector('.message'), data.message)
         return;
       }
+
+      alertMessage(document.querySelector('.alert'), null, null)
     },
 
     validateHiddenSearch(){
@@ -56,8 +59,8 @@ export default {
     <span>Por favor, insira o seu usuário do GitHub</span>
   </div>
 
-  <div class="not_found" hidden>
-    <span>Usuário não localizado!</span>
+  <div class="alert" hidden>
+    <span class="message">Usuário não localizado!</span>
   </div>
 
   <div class="search_loader" hidden>
@@ -79,7 +82,7 @@ export default {
   width: auto;
 }
 
-.empty_input, .not_found {
+.empty_input, .alert {
     color: white;
     position: absolute;
     top: 38%;
@@ -121,5 +124,19 @@ export default {
   transition: 0.4s;
   line-height: 40px;
   cursor: pointer;
+}
+
+@media (max-width: 767px){
+  .empty_input, .alert {
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    border-radius: 40px;
+    padding: 15px;
+    width: auto;
+    font-weight: bold;
+    font-size: 20px;
+  }
 }
 </style>

@@ -90,8 +90,8 @@ section .loader span::before {
     position: relative;
     width: 15.5%;
     height: 60px;
-    top: 200px;
-    left: 43.5%;
+    top: 100px;
+    left: 42%;
   }
 }
 </style>
